@@ -6,6 +6,7 @@ func main() {
 	var annualIncome int
 	var days int
 	var sundays int
+	var additionalSalary int
 	var workingHours int
 	var workingMinute int
 	fmt.Print("時給を入れてください:")
@@ -14,12 +15,14 @@ func main() {
 	fmt.Scan(&days)
 	fmt.Print("日曜日の日数を入力してください：")
 	fmt.Scan(&sundays)
+	fmt.Print("時給から追加される金額を入力してください")
+	fmt.Scan(&additionalSalary)
 	fmt.Print("何時間働きますか：")
 	fmt.Scan(&workingHours)
 	fmt.Print("何分働きますか")
 	fmt.Scan(&workingMinute)
 	minuteSalary := annualIncome / 60 * workingMinute
-	sundayHourlyWage := annualIncome + 30
+	sundayHourlyWage := annualIncome + additionalSalary
 	sundayMinuteSalary := sundayHourlyWage / 60 * workingMinute
 	//hourlyWage := 1013 / 4 * 3
 	//c := sundaySalary / 4 * 3
